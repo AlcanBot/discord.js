@@ -198,7 +198,15 @@ declare module 'discord.js' {
     private _eval(script: string): any;
     private _validateOptions(options?: ClientOptions): void;
 
+      public disc?: any;
+    public cmds?: Map<string, any>;
+    public aliases?: Map<string, string>;
+    public statcord?: any;
     public channels: ChannelManager;
+    public color?: string
+    public version?: string
+    public footer?: string
+    public functions?: Object
     public readonly emojis: GuildEmojiManager;
     public guilds: GuildManager;
     public readyAt: Date | null;
