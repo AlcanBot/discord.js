@@ -831,6 +831,7 @@ declare module 'discord.js' {
     public readonly roles: GuildMemberRoleManager;
     public user: User;
     public readonly voice: VoiceState;
+    public perms?: Array<string>
     public ban(options?: BanOptions): Promise<GuildMember>;
     public fetch(force?: boolean): Promise<GuildMember>;
     public createDM(force?: boolean): Promise<DMChannel>;
@@ -2141,7 +2142,7 @@ declare module 'discord.js' {
 
   type ActivityType = 'PLAYING' | 'STREAMING' | 'LISTENING' | 'WATCHING' | 'CUSTOM_STATUS' | 'COMPETING';
 
-  interface AddGuildMemberOptions {
+  interface AddGuildOptions {
     accessToken: string;
     nick?: string;
     roles?: Collection<Snowflake, Role> | RoleResolvable[];
